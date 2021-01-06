@@ -16,7 +16,12 @@ public class MyLinkedList{
      start = n;
      n.setNext(end);
    }
+   else if(size==2) {
+     n.setPrev(start);
+     end = n;
+   }
    else {
+     n.setPrev(end);
      end = n;
    }
    return true;
