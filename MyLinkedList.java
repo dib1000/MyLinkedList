@@ -30,7 +30,29 @@ public class MyLinkedList{
    return findNode(index).getData();
  }
  public String set(int index, String value) {
-   return null;
+   Node newVal = new Node(value);
+   Node x = findNode(index);
+   if (size()==1) {
+     start = newVal;
+     end = newVal;
+   }
+   else if(index==0) {
+     newVal.setNext(start.getNext());
+     start.getNext().setPrev(newVal);
+     start = newVal;
+   }
+   else if(index==size()-1) {
+     newVal.setPrev(end.getPrev());
+     end.getPrev().setNext(newVal);
+     end = newVal;
+   }
+   else {
+     newVal.setPrev(x.getPrev());
+     newVal.setNext(x.getNext());
+     x.getPrev().setNext(newVal);
+     x.getNext().setPrev(newVal);
+   }
+   return x.getData();
  }
  public String toString() {
    String mll = "";
