@@ -6,6 +6,24 @@ public class listTester {
     System.out.println(m.size());
     m.add("b");
     m.add("c");
+    m.add("b");
+    m.add("c");
+    m.add("b");
+    m.add("c");
+    m.add("b");
+    m.add("c");
+    m.add("b");
+    m.add("c");
+    m.add("b");
+    m.add("c");
+    m.add("b");
+    m.add("c");
+    m.add("b");
+    m.add("c");
+    m.add("b");
+    m.add("c");
     System.out.println(m);
+    System.out.println(m.get(10));
+    System.out.println(m.get(0));
   }
 }

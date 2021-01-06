@@ -27,7 +27,7 @@ public class MyLinkedList{
    System.out.println("what");
  }
  public String get(int index) {
-   return null;
+   return findNode(index).getData();
  }
  public String set(int index, String value) {
    return null;
@@ -40,5 +40,13 @@ public class MyLinkedList{
      current = current.getNext();
    }
    return mll + end.getData();
+ }
+
+ private Node findNode(int index) {
+   Node current = start;
+   for(int i = 0; i<index; i++) {
+     current = current.getNext();
+   }
+   return current;
  }
 }
