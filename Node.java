@@ -20,14 +20,14 @@ public class Node {
     this.next = n;
   }
 
-  public String getNext() {
-    return next.data;
+  public Node getNext() {
+    return next;
   }
 
   public void setPrev(Node n) {
     this.prev = n;
   }
-  public String getPrev() {
-    return prev.data;
+  public Node getPrev() {
+    return prev;
   }
 }

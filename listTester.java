@@ -5,8 +5,7 @@ public class listTester {
     m.add("a");
     System.out.println(m.size());
     m.add("b");
-    System.out.println(m.size());
     m.add("c");
-    System.out.println(m.size());
+    System.out.println(m);
   }
 }
