@@ -15,4 +15,12 @@ public class Node {
   public String getData() {
     return data;
   }
+
+  public void setNext(Node n) {
+    this.next = n;
+  }
+
+  public String getNext() {
+    return next.data;
+  }
 }
