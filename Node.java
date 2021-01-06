@@ -23,4 +23,11 @@ public class Node {
   public String getNext() {
     return next.data;
   }
+
+  public void setPrev(Node n) {
+    this.prev = n;
+  }
+  public String getPrev() {
+    return prev.data;
+  }
 }

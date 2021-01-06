@@ -10,5 +10,9 @@ public class nodeTester {
     System.out.println(n.getNext());
     n.setNext(nd);
     System.out.println(n.getNext());
+    n.setPrev(e);
+    System.out.println(n.getPrev());
+    e.setPrev(n);
+    System.out.println(e.getPrev());
   }
 }
