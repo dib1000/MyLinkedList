@@ -10,6 +10,15 @@ public class MyLinkedList{
    return size;
  }
  public boolean add(String value) {
+   Node n = new Node(value);
+   size+=1;
+   if(size==1) {
+     start = n;
+     n.setNext(end);
+   }
+   else {
+     end = n;
+   }
    return true;
  }
  public void add(int index, String value) {
