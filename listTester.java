@@ -103,5 +103,11 @@ public class listTester {
     l.remove(0);
     System.out.println(l);
     System.out.println(l.size());
+    for(int i = 0; i<10; i++) {
+      l.add(i+"");
+    }
+    System.out.println(l);
+    System.out.println(l.remove(0));
+    System.out.println(l);
   }
 }

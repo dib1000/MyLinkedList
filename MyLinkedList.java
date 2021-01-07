@@ -61,6 +61,10 @@ public class MyLinkedList{
      start = null;
      end = null;
    }
+   else if(index==0) {
+     start.getNext().setPrev(null);
+     start = start.getNext();
+   }
    size--;
    return x.getData();
  }
