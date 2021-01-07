@@ -42,14 +42,17 @@ public class listTester {
     System.out.println();
     MyLinkedList n = new MyLinkedList();
     n.add("n");
-    System.out.println(m.set(0,"X"));
+    System.out.println(m.set(0,"D"));
     System.out.println(n.set(0,"hi"));
     System.out.println(m);
+    System.out.println(m.reverseToString());
     System.out.println(n);
-    System.out.println(m.set(m.size()-1,"X"));
+    System.out.println(m.set(m.size()-1,"E"));
     System.out.println(m);
-    System.out.println(m.set(5,"X"));
+    System.out.println(m.reverseToString());
+    System.out.println(m.set(5,"F"));
     System.out.println(m);
+    System.out.println(m.reverseToString());
     try {
      m.set(-1,"j");
    }
@@ -70,12 +73,15 @@ public class listTester {
     m.add(m.size(),"Y");
     System.out.println(m);
     System.out.println(m.size());
-    m.add(0,"Y");
+    System.out.println(m.reverseToString());
+    m.add(0,"Z");
     System.out.println(m);
     System.out.println(m.size());
+    System.out.println(m.reverseToString());
     m.add(10,"Y");
     System.out.println(m);
     System.out.println(m.size());
+    System.out.println(m.reverseToString());
     try {
      m.add(-1,"j");
    }

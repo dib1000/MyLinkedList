@@ -38,8 +38,8 @@ public class MyLinkedList{
      add(value);
    }
    else if(index==0) {
-     start.getNext().setPrev(n);
-     n.setNext(start.getNext());
+     n.setNext(start);
+     start.setPrev(n);
      start = n;
      size++;
    }
