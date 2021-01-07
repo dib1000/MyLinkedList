@@ -95,7 +95,7 @@ public class MyLinkedList{
      mll += current.getData() + ", ";
      current = current.getNext();
    }
-   return mll + end.getData();
+   return "[" + mll + end.getData() +"]";
  }
 
  public String reverseToString() {
@@ -105,7 +105,7 @@ public class MyLinkedList{
      mll+= current.getData() + ", ";
      current = current.getPrev();
    }
-   return mll + start.getData();
+   return "[" + mll + start.getData() + "]";
  }
 
  private Node findNode(int index) {
