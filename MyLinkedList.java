@@ -1,20 +1,24 @@
 public class MyLinkedList{
  private int size;
  private Node start,end;
+
  public MyLinkedList() {
    size = 0;
    start = null;
    end = null;
  }
+
  public int size() {
    return size;
  }
+
  public boolean add(String value) {
    Node n = new Node(value);
    if(size==0) {
      start = n;
      end = n;
    }
+
    else {
      n.setPrev(end);
      end.setNext(n);
@@ -23,6 +27,7 @@ public class MyLinkedList{
    size++;
    return true;
  }
+
  public void add(int index, String value) {
    if(index<0 || index>size) {
       throw new IndexOutOfBoundsException("Index "+index+" should be in the range [0,size]");
@@ -46,12 +51,14 @@ public class MyLinkedList{
      x.setPrev(n);
    }
  }
+
  public String get(int index) {
    if(index<0 || index>=size) {
      throw new IndexOutOfBoundsException("Index "+index+" should be in the range [0,size)");
    }
    return findNode(index).getData();
  }
+
  public String set(int index, String value) {
    if(index<0 || index>=size) {
      throw new IndexOutOfBoundsException("Index "+index+" should be in the range [0,size)");
@@ -80,6 +87,7 @@ public class MyLinkedList{
    }
    return x.getData();
  }
+
  public String toString() {
    String mll = "";
    Node current = start;
@@ -90,6 +98,16 @@ public class MyLinkedList{
    return mll + end.getData();
  }
 
+ public String reverseToString() {
+   String mll = "";
+   Node current = end;
+   for(int i = size-1; i>0; i--) {
+     mll+= current.getData() + ", ";
+     current = current.getPrev();
+   }
+   return mll + start.getData();
+ }
+
  private Node findNode(int index) {
    Node current = start;
    for(int i = 0; i<index; i++) {
@@ -97,4 +115,5 @@ public class MyLinkedList{
    }
    return current;
  }
+
 }
