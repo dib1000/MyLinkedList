@@ -52,6 +52,19 @@ public class MyLinkedList{
    }
  }
 
+ public String remove(int index) {
+   if(index<0 || index>size) {
+      throw new IndexOutOfBoundsException("Index "+index+" should be in the range [0,size]");
+    }
+   Node x = findNode(index);
+   if(size==1) {
+     start = null;
+     end = null;
+   }
+   size--;
+   return x.getData();
+ }
+
  public String get(int index) {
    if(index<0 || index>=size) {
      throw new IndexOutOfBoundsException("Index "+index+" should be in the range [0,size)");
@@ -89,6 +102,9 @@ public class MyLinkedList{
  }
 
  public String toString() {
+   if (size==0) {
+     return "[]";
+   }
    String mll = "";
    Node current = start;
    for(int i = 0; i<size()-1; i++) {
@@ -99,6 +115,9 @@ public class MyLinkedList{
  }
 
  public String reverseToString() {
+   if (size==0) {
+     return "[]";
+   }
    String mll = "";
    Node current = end;
    for(int i = size-1; i>0; i--) {

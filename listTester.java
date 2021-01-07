@@ -94,5 +94,14 @@ public class listTester {
     catch(IndexOutOfBoundsException e) {
       e.printStackTrace();
     }
+    System.out.println();
+
+    System.out.println("TESTING REMOVE");
+    MyLinkedList l = new MyLinkedList();
+    System.out.println(l);
+    l.add("hi");
+    l.remove(0);
+    System.out.println(l);
+    System.out.println(l.size());
   }
 }
