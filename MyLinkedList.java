@@ -24,12 +24,38 @@ public class MyLinkedList{
    return true;
  }
  public void add(int index, String value) {
-   System.out.println("what");
+   if(index<0 || index>size) {
+      throw new IndexOutOfBoundsException("Index "+index+" should be in the range [0,size]");
+    }
+   Node n = new Node(value);
+   Node x = findNode(index);
+   if(size()==0 || index==size()) {
+     add(value);
+   }
+   else if(index==0) {
+     start.getNext().setPrev(n);
+     n.setNext(start.getNext());
+     start = n;
+     size++;
+   }
+   else {
+     size++;
+     n.setNext(x);
+     n.setPrev(x.getPrev());
+     x.getPrev().setNext(n);
+     x.setPrev(n);
+   }
  }
  public String get(int index) {
+   if(index<0 || index>=size) {
+     throw new IndexOutOfBoundsException("Index "+index+" should be in the range [0,size)");
+   }
    return findNode(index).getData();
  }
  public String set(int index, String value) {
+   if(index<0 || index>=size) {
+     throw new IndexOutOfBoundsException("Index "+index+" should be in the range [0,size)");
+   }
    Node newVal = new Node(value);
    Node x = findNode(index);
    if (size()==1) {

@@ -25,6 +25,18 @@ public class listTester {
     System.out.println(m);
     System.out.println(m.get(10));
     System.out.println(m.get(0));
+    try {
+     m.get(-1);
+   }
+   catch(IndexOutOfBoundsException e) {
+     e.printStackTrace();
+   }
+   try {
+    m.get(m.size()+1);
+  }
+  catch(IndexOutOfBoundsException e) {
+    e.printStackTrace();
+  }
 
     System.out.println();
     MyLinkedList n = new MyLinkedList();
@@ -37,5 +49,43 @@ public class listTester {
     System.out.println(m);
     System.out.println(m.set(5,"X"));
     System.out.println(m);
+    try {
+     m.set(-1,"j");
+   }
+    catch(IndexOutOfBoundsException e) {
+     e.printStackTrace();
+   }
+    try {
+      m.set(m.size()+1,"f");
+    }
+    catch(IndexOutOfBoundsException e) {
+      e.printStackTrace();
+    }
+    System.out.println();
+
+    MyLinkedList a = new MyLinkedList();
+    a.add(0,"zzz");
+    System.out.println(a);
+    m.add(m.size(),"Y");
+    System.out.println(m);
+    System.out.println(m.size());
+    m.add(0,"Y");
+    System.out.println(m);
+    System.out.println(m.size());
+    m.add(10,"Y");
+    System.out.println(m);
+    System.out.println(m.size());
+    try {
+     m.add(-1,"j");
+   }
+    catch(IndexOutOfBoundsException e) {
+     e.printStackTrace();
+   }
+    try {
+      m.add(m.size()+1,"f");
+    }
+    catch(IndexOutOfBoundsException e) {
+      e.printStackTrace();
+    }
   }
 }
