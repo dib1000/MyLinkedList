@@ -113,5 +113,28 @@ public class listTester {
     System.out.println(l);
     System.out.println(l.remove(3));
     System.out.println(l);
+    System.out.println();
+
+    System.out.println("TESTING EXTEND");
+    MyLinkedList b = new MyLinkedList();
+    for(double x = 4.0; x<4.5; x+=0.1) {
+      b.add(""+x);
+    }
+    l.extend(b);
+    System.out.println(l);
+    System.out.println(l.size());
+    System.out.println(l.reverseToString());
+    System.out.println(b);
+    System.out.println(b.size());
+    b.add("g");
+    b.add("r");
+    b.add("g");
+    b.add(2,"e");
+    System.out.println(b);
+    l.add(7,"CHECK");
+    System.out.print(l);
+    l.remove(7);
+    l.remove(7);
+    System.out.println(l);
   }
 }

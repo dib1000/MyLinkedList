@@ -126,6 +126,16 @@ public class MyLinkedList{
    return "[" + mll + end.getData() +"]";
  }
 
+ public void extend(MyLinkedList other) {
+   this.end.setNext(other.start);
+   other.start.setPrev(this.end);
+   this.end = other.end;
+   this.size+= other.size;
+   other.start = null;
+   other.end = null;
+   other.size = 0;
+ }
+
  public String reverseToString() {
    if (size==0) {
      return "[]";
