@@ -109,5 +109,9 @@ public class listTester {
     System.out.println(l);
     System.out.println(l.remove(0));
     System.out.println(l);
+    System.out.println(l.remove(l.size()-1));
+    System.out.println(l);
+    System.out.println(l.remove(3));
+    System.out.println(l);
   }
 }

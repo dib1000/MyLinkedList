@@ -65,6 +65,14 @@ public class MyLinkedList{
      start.getNext().setPrev(null);
      start = start.getNext();
    }
+   else if (index==size-1) {
+     end.getPrev().setNext(null);
+     end = end.getPrev();
+   }
+   else {
+     x.getPrev().setNext(x.getNext());
+     x.getNext().setPrev(x.getPrev());
+   }
    size--;
    return x.getData();
  }
